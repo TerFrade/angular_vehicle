@@ -1,2 +1,5 @@
-<p>{{ vehicle.make.name }}</p>
-<p *ngFor="let item of vehicle.make.model">{{ item.name }}</p>
+<div>
+  <p>{{ vehicle.make.name }}</p>
+  <p *ngFor="let item of vehicle.make.model">{{ item.name }}</p>
+  <button class="del">X</button>
+</div>
