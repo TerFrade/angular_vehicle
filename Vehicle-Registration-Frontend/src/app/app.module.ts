@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { VehicleItemComponent } from './components/vehicle-item/vehicle-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    VehicleItemComponent
   ],
   imports: [
     BrowserModule,
