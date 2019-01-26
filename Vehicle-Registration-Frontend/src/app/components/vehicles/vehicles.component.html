@@ -1,0 +1,12 @@
+<div>
+  <ol>
+    <ng-container *ngFor="let item of vehicles">
+      <div>
+        {{ item.make.id }}: {{ item.make.name }} -
+        <ng-container *ngFor="let subItem of item.make.model">
+          {{ subItem.id }}:{{ subItem.name }},
+        </ng-container>
+      </div>
+    </ng-container>
+  </ol>
+</div>
