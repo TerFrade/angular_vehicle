@@ -14,8 +14,18 @@ namespace Vehicle_Registration_Backend.Models
         {
         }
 
-        public DbSet<Vehicle_Registration_Backend.Models.Model> Model { get; set; }
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserVehicle>().HasKey(uv =>
+              new { uv.UserId, uv.VehicleId });
+        }
         public DbSet<Vehicle_Registration_Backend.Models.Make> Make { get; set; }
-    }
+
+        public DbSet<Vehicle_Registration_Backend.Models.Feature> Feature { get; set; }
+
+        public DbSet<Vehicle_Registration_Backend.Models.User> User { get; set; }
+
+        public DbSet<Vehicle_Registration_Backend.Models.Vehicle> Vehicle { get; set; }
+
+       }
 }

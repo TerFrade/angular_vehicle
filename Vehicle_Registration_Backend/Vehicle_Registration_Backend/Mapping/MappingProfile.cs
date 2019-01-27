@@ -14,6 +14,7 @@ namespace Vehicle_Registration_Backend.Mapping
         {
             CreateMap<Make, MakeResource>();
             CreateMap<Model, ModelResource>();
+            CreateMap<Feature, FeatureResource>();
         }
     }
 }
